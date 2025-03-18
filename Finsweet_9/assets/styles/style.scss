@@ -1,0 +1,34 @@
+@use "./utilites/variables";
+@use "./utilites/reset";
+@use "./utilites/container";
+@use "./utilites/mixins";
+
+// block
+    // header
+@use "./blocks/header";
+
+@use "./blocks/hero";
+
+@use "./blocks/howitwork";
+
+@use "./blocks/projects";
+
+@use "./blocks/features";
+
+@use "./blocks/clients";
+
+@use "./blocks/questions";
+
+@use "./blocks/inquiry";
+
+@use "./blocks/ourblog";
+
+@use "./blocks/contactinfo";
+
+@use "./blocks/footer";
+// ui
+@use "./ui/btn";
+
+
+
+

@@ -1,0 +1,76 @@
+@use "../utilites/variables" as *;
+@use "../utilites/mixins" as *;
+
+
+
+.clients{
+    background-color: $color-grey;
+    &-inner{
+        padding-block: 128px;
+        display: flex;
+        justify-content: space-between;
+        
+    }
+
+    .right-text{
+        width: 30%;
+        margin-right: 70px;
+        h1{
+            @include text($color:$color-darkblue,$f-weight:600,$f-size:38px,$l-height:56px);   
+            padding-bottom: 16px;
+        }
+        p{
+            @include text($color:$color-darkblue,$f-size:16px,$l-height:28px);
+            opacity: 0.7;   
+        }
+    }
+    &_review{
+        width: 70%;
+        h1{
+            @include text($color:$color-darkblue,$f-weight:500,$f-size:32px,$l-height:48px);   
+        }
+        .profile-card{
+            display: flex;
+            justify-content: cen;
+            padding-top: 50px;
+            .profile-image{
+                width: 70px;
+                height: 70px;
+                border-radius: 50%;
+                object-fit: cover;
+                margin-right: 15px;
+            }
+            .profile-info{
+                flex-grow: 1;
+                margin-right: 14px;
+                h3{
+                    @include text($color:$color-darkblue,$f-weight:500,$f-size:18px,$l-height:32px);   
+                }
+                p{
+                    @include text($color:$color-darkblue,$f-weight:400,$f-size:12px,$l-height:28px);   
+                }
+            }
+            .navigation-button{
+                display: flex;
+                align-items: center;
+                gap:10px;
+                
+                .greater-button{
+                    background-color: #ffff;
+                    border: 1px solid transparent;
+                    border-radius: 50%;
+                    padding: 13px 20px ;
+                }
+                .less-button{
+                    background-color: #5239FA;
+                    border: 1px solid transparent;
+                    border-radius: 50%;
+                    padding: 13px 20px;
+                }
+            }
+            .navigation-button:hover{
+                opacity: 0.8;
+            }
+        }
+    }
+}

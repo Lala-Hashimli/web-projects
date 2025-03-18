@@ -1,0 +1,54 @@
+@use "../utilites/variables" as *;
+@use "../utilites/mixins" as *;
+.howitwork{
+    background-color: $color-grey;
+    &-inner{
+        padding-block: 128px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &-left{
+        width:30%;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        h2{
+            @include text($color:$color-darkblue,$f-size:48px,$l-height:64px);
+        }
+        p{
+            @include text($color:$color-darkblue,$l-height:28px);
+            opacity: 0.7;
+        }
+        &_link{
+            color: $color-royalblue;
+            font-weight: 600;
+            display: flex;
+            gap: 1em;
+            align-items: center;
+            
+        }
+    }
+    &-right{
+        width: 50%;
+        
+        &_cards{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3em;
+            .howitwork-right_card{
+                
+                .card-title{
+                    padding: 16px 0 8px 0;    
+                    @include text($color:$color-darkblue,$f-size:32px,$f-weight:600,$l-height:48px);
+                }
+                .card-text{
+                    width: 300px;
+                    @include text($color:$color-darkblue,$l-height:28px);
+                    opacity: 0.7;
+                }
+            }
+        }
+        
+    }
+}

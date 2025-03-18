@@ -1,0 +1,55 @@
+@use "../utilites/variables" as *;
+@use "../utilites/mixins" as *;
+
+.questions{
+    background-color: $color-white;
+    &-inner{
+        padding-block:128px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &-left{
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        h1{
+            @include text($color:$color-darkblue,$f-size:38px,$f-weight:600,$l-height:56px);
+        }
+        a{
+            @include text($color:$color-royalblue,$f-size:18px,$f-weight:500,$l-height:32px);
+        }
+    }
+    &-right{
+        width: 60%;
+        .questionspart{
+
+            .question{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 25px;
+                padding: 2em;
+                .number{
+                    @include text($color:$color-royalblue,$f-size:24px,$f-weight:600,$l-height:36px); 
+                    
+                }
+                .q-sentences{
+                    flex: 1;
+                    @include text($color:$color-darkblue,$f-size:24px,$f-weight:600,$l-height:36px); 
+                    
+                }
+                img{
+                    flex-shrink: 0; 
+                }
+            }
+            .border{
+                border:none;
+                border-bottom: 2px solid #ECECF1;
+                width: 100%;
+            }
+            
+        }
+    }
+}

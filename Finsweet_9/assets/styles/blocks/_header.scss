@@ -1,0 +1,31 @@
+@use "../utilites/variables" as *;
+
+
+
+
+.header{
+    background-color: $color-tintblue;
+    padding: 16px 0;
+    &-nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        &__links{
+            display: flex;
+            list-style-type: none;
+            gap: 32px;
+            color: #BBBBCB;
+            font-size: 16px;
+            font-weight: 500;
+            .active{
+                color: $color-white;
+            }
+        }
+        .btn:hover{
+            background-color: $color-yellow;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+
+}

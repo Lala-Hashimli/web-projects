@@ -1,0 +1,57 @@
+@use "../utilites/variables" as *;
+@use "../utilites/mixins" as *;
+
+.ourblog{
+    background-color: $color-white;
+    &-inner{
+        padding-block:128px;
+    }
+    h1{
+        @include text($color:$color-darkblue,$f-size:48px,$f-weight:600,$l-height:64px);
+        padding-bottom: 64px;
+    }
+    &-cards{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
+        &_card{
+            .blog-photo{
+                margin-bottom:30px;
+            }
+            .card-text{
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                .date{
+                    @include text($color:$color-darkblue,$f-weight:400,$l-height:28px);
+                    opacity: 0.7;
+                }
+                .title{
+                    @include text($color:$color-darkblue,$f-size:24px,$f-weight:500,$l-height:36px);
+                }
+                .expl{
+                    @include text($color:$color-darkblue,$f-size:16px,$f-weight:400,$l-height:28px);
+                    opacity: 0.7;
+                }
+            }
+            .readmore{
+                display: flex;
+                margin-top: 32px;
+                a{
+                    @include text($color:$color-darkblue,$f-size:16px,$f-weight:500,$l-height:28px);
+                }
+                & a:hover img{
+                    animation: arrowrightAnim 1s linear infinite;
+                }
+                @keyframes arrowrightAnim {
+                    0%{
+                        transform: translateX(0);
+                    }
+                    100%{
+                        transform: translateX(10px);
+                    }
+                }
+            }
+        }
+    }
+}

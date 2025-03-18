@@ -1,0 +1,110 @@
+@use "../utilites/variables" as *;
+@use "../utilites/mixins" as *;
+
+.inquiry{
+    padding: 128px;
+    &-inner{
+        background-color: $color-tintblue;
+        display: flex;
+    }
+    &-left{
+        padding: 96px;
+        width: 50%;
+        position: relative;
+        img{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+        .bgc-tintblue{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgb(28, 30, 83,0.5);
+        }
+        .inquiry-text{
+            position: relative;
+            z-index: 3;
+            display: flex;
+            flex-direction: column;
+            gap:24px;
+            h1{
+                @include text($color:$color-white,$f-size:54px,$f-weight:500,$l-height:74px);
+            }
+            p{
+                @include text($color:$color-white,$f-size:16px,$f-weight:400,$l-height:28px);
+                
+            }
+        }
+    }
+    &-right{
+        padding: 96px;
+        width: 50%;
+        h1{
+            @include text($color:$color-white,$f-size:32px,$f-weight:500,$l-height:48px);
+            padding-bottom: 16px;
+        }
+        p{
+            @include text($color:$color-grey,$f-size:16px,$f-weight:500,$l-height:28px);
+        }
+        &_form{
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            padding-top: 40px;
+            input{
+                background-color: transparent;
+                color: $color-white;
+                border: 1px solid rgb(255, 255, 255,0.2);
+                border-radius: 5px;
+                padding: 12px;
+                outline: none;
+            }
+            input::placeholder {
+                @include text($color:$color-grey,$f-size:16px,$f-weight:400,$l-height:28px);
+                letter-spacing: 0.07em;
+                opacity: 0.5;
+            }
+            button{
+                margin-top: 20px;
+                padding: 12px;
+                background-color: $color-yellow;
+                border:none;
+                border-radius: 25px;
+                @include text($color:black,$f-size:18px,$f-weight:500,$l-height:32px);
+                text-align: center;
+            }
+            button:hover{
+                background-color: $color-darkblue;
+                color: $color-white;
+                transition: all 0.3s ease-in-out;
+                cursor: pointer;
+            }
+        }
+        .inquiry_link{
+            display: flex;
+            justify-content: center;
+            gap:16px;
+            margin-top:28px;
+            a{
+                color: $color-white;
+            }
+            & a:hover img{
+                animation: arrowrightAnim 1s linear infinite;
+            }
+            @keyframes arrowrightAnim {
+                0%{
+                    transform: translateX(0);
+                }
+                100%{
+                    transform: translateX(10px);
+                }
+            }
+        }
+    }
+}

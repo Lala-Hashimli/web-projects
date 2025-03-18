@@ -1,0 +1,76 @@
+@use "../utilites/variables" as *;
+@use "../utilites/mixins" as *;
+
+
+.features{
+    background-color: $color-grey;
+   
+    &-inner{
+        padding-block: 128px;
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+    }
+    
+    &-header{
+        
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        
+        p{
+            @include text($color:$color-darkblue,$f-weight:600,$l-height:28px);   
+        }
+        h1{
+            @include text($color:$color-darkblue,$f-weight:600,$f-size:48px,$l-height:64px,$t-align:center);   
+        }
+    }
+
+    &-cards{
+        margin-top: 47px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 24px;
+        row-gap: 32px;
+        &_card{
+            background-color: $color-white;
+            padding: 53px 33px 48px 48px;
+            i{
+                font-size: 32px;
+                color: $color-royalblue;
+            }
+            h1{
+                padding-top: 23px;
+                @include text($color:$color-darkblue,$f-size:24px,$f-weight:600,$l-height:36px);
+            }
+            p{
+                padding-top: 12px;
+                @include text($color:$color-darkblue,$f-size:16px,$l-height:28px);
+                opacity: 0.7;
+            }
+        }
+
+        &_card:hover{
+            background-color: $color-royalblue;
+            border-radius: 5px;
+            transition: all 0.3s ease-in-out;
+            transform: translate(-15px);
+            
+            i{
+                color: $color-white;
+            }
+            h1{
+                padding-top: 23px;
+                @include text($color:$color-white,$f-size:24px,$f-weight:600,$l-height:36px);
+            }
+            p{
+                padding-top: 12px;
+                @include text($color:$color-white,$f-size:16px,$l-height:28px);
+                opacity: 0.7;
+            }
+        }
+    }
+}

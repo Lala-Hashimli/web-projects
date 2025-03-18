@@ -1,0 +1,62 @@
+@use "../utilites/variables" as *;
+@use "../utilites/mixins" as *;
+
+.contactinfo{
+    background-color: $color-tintblue;
+    padding: 96px;
+    &-inner{
+        display: flex;
+        justify-content: space-between;
+        
+    }
+    &-left{
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        position: relative;
+        .logo img{
+            width: 160px;
+            height: 32px;
+        }
+        p{
+            @include text($color:$color-white,$f-size:16px,$f-weight:400,$l-height:28px);
+            opacity: 0.7;
+        }
+        .contact{
+            padding: 17px 133px 17px 30px;
+            background-color: $color-yellow;
+            display: flex;
+            gap: 20px;
+            position: absolute;
+            bottom: -47%;
+            right: -40%;
+            .contact-title{
+                @include text($color:$color-darkblue,$f-size:18px,$f-weight:500,$l-height:32px);
+            }
+            .contact-text{
+                @include text($color:$color-darkblue,$f-size:16px,$f-weight:400,$l-height:28px);
+                opacity: 0.7;
+            }
+        }
+    }
+    &-right{
+        width: 30%;
+        h1{
+            @include text($color:$color-white,$f-size:48px,$f-weight:600,$l-height:64px);
+            margin-bottom: 14px;
+        }
+        p{
+            @include text($color:$color-grey,$f-size:16px,$f-weight:400,$l-height:28px);
+            opacity: 0.7;
+            padding-bottom: 28px;
+        }
+        .contactinfo-links{
+            display: flex;
+            gap: 26px;
+            i{
+                color: $color-white;
+            }
+        }
+    }
+}

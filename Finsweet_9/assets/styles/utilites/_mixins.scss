@@ -1,0 +1,9 @@
+@use "../utilites/variables" as *;
+
+@mixin text($color,$f-size:16px,$f-weight:normal, $l-height:normal,$t-align:left){
+    color: $color;
+    font-size: $f-size;
+    font-weight: $f-weight;
+    line-height: $l-height;
+    text-align: $t-align;
+}
