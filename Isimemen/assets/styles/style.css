@@ -491,21 +491,37 @@ a{
 *Numbers end*/
 
 /*
-*marque-container*/
+*marque*/
 
 .marque-container{
-    padding: 60px 0;
+    padding: 65px 0;
     background-color: #f3e9e2;
+    overflow: hidden;
 }
 .marque{
-    font-size: 40px;
-    display: flex;
-    flex-direction: row;
+    white-space: nowrap;
+    margin: 0 2em;
 }
-.marque h2{
+.marque div{
+    display: flex;
+    gap: 2em;
+}
+.marque p{
+    font-size: 80px;
     color: black;
     line-height: 1.1;
     font-family: 'Wulkan Display', sans-serif;
+}
+.righttoleft{
+    animation: righttoleft 10s linear infinite;
+}
+@keyframes righttoleft{
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(-50%);
+    }
 }
 
 /*
