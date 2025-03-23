@@ -1,0 +1,76 @@
+@use "../utilites/variables" as *;
+@use "../utilites/mixins" as *;
+
+.features{
+    position: relative;
+    background: radial-gradient(circle, #323661 0%, #313773 100%),rgb(41, 30, 73,0.55);
+    &_bgc{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    &-inner{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .feature-inner_left{
+            width: 35%;
+            padding-block: 85px;
+            .story{
+                display: flex;
+                flex-direction: column;
+                gap: 4px;
+                h1{
+                    font-family: $font-family-Karantina;
+                    @include text($color:$color-white,$f-size:128px,$f-weight:400);
+                    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.5) 100%);
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+                p{
+                    @include text($color:$color-grey,$f-size:12px,$f-weight:bold);
+                    font-family: $font-family-Inter;
+                }
+            }
+            .list{
+                padding-top: 60px;
+                ul{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 30px;
+                    li{
+                        
+                        font-family: $font-family-Inter;
+                        @include text($color:$color-orange,$f-size:16px);
+                    }
+                    li::marker{
+                        color: $color-white;
+                    }
+                }
+            }
+        }
+        .feature-inner_right{
+            position: absolute;
+            left: 51%;
+            .video{
+                background-color: $color-black;
+                padding: 44px 60px;
+                border-radius: 15px;
+                .video-bgc{
+                    position: relative;
+                    border-radius: 15px;
+                    
+                }
+                .playbutton{
+                    position: absolute;
+                    top: 40%;
+                    left: 45%;
+                }
+            }
+        }
+    }
+}

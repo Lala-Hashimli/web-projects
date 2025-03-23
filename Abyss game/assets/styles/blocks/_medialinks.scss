@@ -1,0 +1,19 @@
+@use "../utilites/variables" as *;
+@use "../utilites/mixins" as *;
+
+.media-links{
+    padding: 13px 0;
+    background-color: $color-black;
+    width: 100%;
+    .links{
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        i{
+            font-size: 24px;
+            background-color: $color-white;
+            padding: 8px 7px;
+            border-radius: 50%;
+        }
+    }
+}

@@ -1,0 +1,39 @@
+@use "../utilites/variables" as *;
+@use "../utilites/mixins" as *;
+
+.reviews{
+    background-color: $color-black;
+    padding: 48px 0;
+    &-inner{
+        
+        .queto{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            p{
+                width: 25%;
+                @include text($color:$color-white,$f-size:40px,);
+                font-family: $font-family-Karantina;
+                span{
+                    @include text($color:#777676,$f-size:40px,);
+                    
+                }
+            }
+        }
+        .reviews-navs{
+            display: flex;
+            justify-content: center;
+            gap: 13px;
+            padding-top: 25px;  
+            .nav{
+                border: 1px solid rgb(131, 129, 129,0.5);
+                width: 50px;
+            }
+            .active{
+                border: 1px solid $color-white;
+
+            }
+        }
+    }
+}
